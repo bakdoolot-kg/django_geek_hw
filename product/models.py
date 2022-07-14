@@ -12,3 +12,5 @@ class Phones(models.Model):
 class Categories(models.Model):
     name = models.CharField(max_length=200)
     brand = models.CharField(max_length=255)
+    price = models.CharField(max_length=255)
+    camera = models.TextField(null=True, blank=True)

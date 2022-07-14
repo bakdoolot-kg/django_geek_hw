@@ -4,6 +4,7 @@ from product import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('phone/', views.phone),
+    path('categories/', views.categories),
     path('', views.homepage),
-    path('phone/', views.phone)
 ]
