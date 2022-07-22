@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render, HttpResponse
 from .models import Phones
 
@@ -8,8 +9,8 @@ def homepage(request):
 
 def phone(request):
     phone_object = Phones.objects.get(id=1)
-    description = f"{phone_object.name}, {phone_object.description}"
-    return HttpResponse(description)
+    data={"name": phone_object.name}
+    return render(request, "product_list.html", context=data)
 
 
 def categories(request):
